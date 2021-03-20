@@ -63,6 +63,19 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
+
+// create a new paragraph to add it to the page dynamically
+function new_paragraph(){
+
+    for (section of sections)
+    {
+        const paragraph = document.createElement("p");
+        const textNode = document.createTextNode("Stay safe and in a good health");
+        const result = paragraph.appendChild(textNode);
+        append(section, result);
+    };
+};
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -91,4 +104,5 @@ window.addEventListener('scroll', active);
 // to top button
 window.onscroll = scrollFunction;
 
-
+// append a new paragraph as a child for each section
+new_paragraph();
